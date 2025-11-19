@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(230, 218, 162);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    background-image: url("{{ url_for('static', filename='folhabackgorund.jpg') }}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar a {
+    text-align: center;
+    color: rgb(227, 214, 147);
+    background-color: rgb(63, 126, 63);
+    padding: 20px;
+    ext-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 10px 0 15px
+}
+    
+
+h1{
+    color: rgb(25, 65, 25);
+    text-align: center;
+    text-shadow: 1px 1px 2px white;
+}
+
+h2{
+    color: rgb(25, 65, 25);
+     text-align: center;
+     text-shadow: 1px 1px 2px white;
+}

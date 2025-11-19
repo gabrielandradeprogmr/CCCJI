@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='vela.ico') }}" type="image/x-icon">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilohome.css') }}">
+    
+
+
+
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <a href="{{ url_for('agenda') }}">Agenda</a>
+        <a href="{{ url_for('ajuda') }}">Doações</a>
+
+    </nav>
+
+    <h1>
+        Bem vindo a Casa de Caridade Cabocla Jurema & Iemanja
+    </h1>
+
+    <img src="{{ url_for('static', filename='jurema (1).png') }}" alt="Jurema">
+
+    <h2>Quem somos?</h2>
+
+    <p>
+        O Terreiro de Umbanda é um espaço de fé, amor
+        e caridade, onde todos são acolhidos com 
+        respeito e coração aberto. Aqui na <abbr title="Casa de Caridade Cabocla Jurema & Iemanjá">CCCJI</abbr> estamos sob a firme e 
+        amorosa condução da zeladora Katia, o terreiro
+        segue o caminho da luz e da espiritualidade.
+        Ao seu lado, o pai pequeno e ogan Wagner 
+        auxilia nas giras e nos trabalhos, garantindo
+        que tudo aconteça em harmonia com os guias
+        e orixás. O presidente Luiz trabalha com
+        dedicação para manter o terreiro sempre
+        organizado e de portas abertas para quem
+        busca conforto espiritual. Juntos, 
+        formam uma linda família de axé, espalhando 
+        paz, união e fé.
+    </p>
+
+    <h2>
+        Nossa história
+    </h2>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum magnam aperiam expedita praesentium voluptates distinctio
+        nihil! Ipsam, perferendis quo minima veritatis sequi porro accusamus obcaecati eveniet quos eaque voluptatem odio        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum magnam aperiam expedita praesentium voluptates 
+    </p>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

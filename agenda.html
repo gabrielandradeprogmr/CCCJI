@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='calendario.ico') }}" type="image/x-icon">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='agenda.css') }}">
+    
+
+
+
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <a href="{{ url_for('home') }}">Página Inicial</a>
+        <a href="{{ url_for('ajuda') }}">Doações</a>
+
+    </nav>
+
+    <h1>
+        Calendário
+    </h1>
+
+
+
+    <h2></h2>
+
+    <p>
+        Aqui você acompanha a programação completa do nosso terreiro. Encontre informações sobre os próximos eventos, dias de gira, períodos de folga das atividades e datas reservadas para doações. Tudo organizado para que você possa participar e se planejar com tranquilidade.
+    </p>
+
+ <h2>Próximos Eventos</h2>
+ 
+
+    {% if mostrar_botao %}
+        <a href="/novo_evento" class="botao-add">+ Novo Evento</a>
+    {% endif %}
+
+
+    <h2>{{ mes_nome }} de {{ ano }}</h2>
+
+    <div id="calendar-container">
+        {{ calendario_html|safe }}
+    </div>
+
+    <ul>
+        {% for evento in eventos %}
+            <li>
+                <strong>{{ evento['data'] }}</strong><br>
+                <strong>{{ evento['titulo'] }}</strong><br>
+                {{ evento['descricao'] }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
